@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title_bar_style"
+        android:gravity="center"
+        android:text="维修服务"
+        android:textAppearance="@style/style_app_headtitle" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#8FF9C6"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_drain_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/ic_launcher"
+                android:text="@string/drain" />
+
+            <TextView
+                android:id="@+id/tv_electric_circuit_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/ic_launcher"
+                android:text="@string/electric_circuit" />
+
+            <TextView
+                android:id="@+id/tv_replacing_lamp_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/ic_launcher"
+                android:text="@string/replacing_lamp" />
+
+            <TextView
+                android:id="@+id/tv_lock_repair_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/ic_launcher"
+                android:text="@string/lock_repair" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#dddddd" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" >
+
+            <include layout="@layout/bd_company_list_container" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#dddddd" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7" >
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="50dp"
+                android:maxEms="2"
+                android:text="提交预约" />
+            
+            <LinearLayout
+                android:id="@+id/ll_worker_selector"
+                android:layout_toLeftOf="@id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout> 
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

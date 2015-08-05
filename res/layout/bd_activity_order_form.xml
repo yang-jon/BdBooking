@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title_bar_style"
+        android:gravity="center"
+        android:text="我的订单"
+        android:textAppearance="@style/style_app_headtitle" />
+    
+    <LinearLayout android:id="@+id/ll_book_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        
+        <LinearLayout android:id="@+id/ll_completed_book_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            
+            <TextView android:id="@+id/tv_completed_book"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:background="#6E6E6E"
+                android:text="已完成订单"/>
+            <booking.bd.com.bdbooking.ui.HorizontalListView 
+                android:id="@+id/hl_completed_book_list"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1">
+            </booking.bd.com.bdbooking.ui.HorizontalListView>
+            
+        </LinearLayout>
+        
+         <LinearLayout android:id="@+id/ll_uncompleted_book_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            
+            <TextView android:id="@+id/tv_uncompleted_book"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:background="#6E6E6E"
+                android:text="未完成订单"/>
+            <booking.bd.com.bdbooking.ui.HorizontalListView 
+                android:id="@+id/hl_uncompleted_book_list"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1">
+            </booking.bd.com.bdbooking.ui.HorizontalListView>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

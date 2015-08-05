@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="170dp"
+    android:layout_gravity="center"
+    android:background="#6E6E6E" >
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="昨天 12:00" />
+    
+    <Button android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#05D6C4"
+        android:layout_alignParentBottom="true"
+        android:text="取消订单"/>
+    
+    <RatingBar android:id="@+id/rb_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_cancel"
+        android:layout_alignLeft="@id/tv_date"
+        style="@style/style_rating_secondary"
+        android:visibility="gone"/>
+    
+    <TextView android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_cancel"
+        android:layout_alignLeft="@id/tv_date"
+        android:text="评分/未评分"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_date"
+        android:layout_below="@id/tv_date"
+        android:layout_marginTop="10dp"
+        android:text="小胡" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_date"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="10dp"
+        android:text="XXX家政公司" />
+
+</RelativeLayout>

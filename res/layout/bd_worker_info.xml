@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5AE281" >
+
+        <ImageView
+            android:id="@+id/iv_worker_img"
+            android:layout_width="@dimen/bd_worker_img_width"
+            android:layout_height="@dimen/bd_worker_img_height"
+            android:layout_margin="20dp"
+            android:background="@drawable/movie" />
+
+        <TextView
+            android:id="@+id/tv_worker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_worker_img"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/bd_worker_name_text_size"
+            android:text="常小兰" />
+        
+        
+		<LinearLayout 
+		    android:id="@+id/tv_worker_info"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:layout_toRightOf="@id/iv_worker_img"
+		    android:layout_below="@id/tv_worker_name"
+		    android:orientation="horizontal">
+		    
+		    <LinearLayout 
+		        android:id="@+id/tv_worker_info_1"
+		        android:layout_height="wrap_content"
+		        android:layout_width="0dp"
+		        android:layout_weight="4"
+		        android:orientation="vertical">
+		        <TextView
+		            android:id="@+id/tv_worker_age"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:textSize="@dimen/bd_worker_normal_text_size"
+		            android:text="年龄：50" />
+		        <TextView
+		            android:id="@+id/tv_worker_hometown"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:textSize="@dimen/bd_worker_normal_text_size"
+		            android:text="籍贯：湖北武汉" />
+				        
+		        <TextView
+		            android:id="@+id/tv_worker_experience"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:textSize="@dimen/bd_worker_normal_text_size"
+		            android:text="工作经验：3年" />
+		        <TextView
+		            android:id="@+id/tv_worker_education"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:textSize="@dimen/bd_worker_normal_text_size"
+		            android:text="学历：高中" />
+		        <TextView
+		            android:id="@+id/tv_worker_number"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="@dimen/bd_worker_normal_text_size"
+		            android:singleLine="true"
+		            android:text="编号：NM0098" />
+		    </LinearLayout>
+		    
+		    <LinearLayout 
+		        android:id="@+id/tv_worker_info_2"
+		        android:layout_height="wrap_content"
+		        android:layout_width="0dp"
+		        android:layout_weight="6"
+		        android:paddingLeft="5dp"
+		        android:orientation="vertical">
+		        <TextView
+                    android:id="@+id/tv_worker_skill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/bd_worker_normal_text_size"
+                    android:text="个人能力：做家务" />
+
+                <TextView
+                    android:id="@+id/tv_worker_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/bd_worker_normal_text_size"
+                    android:text="目前住址：北京海淀" />
+
+                <TextView
+                    android:id="@+id/tv_worker_training_records"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/bd_worker_normal_text_size"
+                    android:text="培训经历：无" />
+
+                <TextView
+                    android:id="@+id/tv_worker_specialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/bd_worker_normal_text_size"
+                    android:text="个人特长：擅做美食" />
+
+                <TextView
+                    android:id="@+id/tv_worker_evaluation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/bd_worker_normal_text_size"
+                    android:text="各户评价：****" />
+
+		    </LinearLayout>
+		    
+		</LinearLayout>
+	<View android:layout_width="match_parent"
+	    android:layout_height="5dp"
+	    android:layout_below="@id/iv_worker_img"
+	    android:background="#1DA444"/>
+	<TextView
+	    android:layout_below="@id/iv_worker_img"
+	    android:layout_marginTop="5dp"
+	    android:id="@+id/evaluation_title"
+	    android:padding="5dp"
+	    android:text="客户评价" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"/>
+	<ListView
+	    android:id="@+id/ll_evaluation_list" 
+	    android:layout_below="@id/evaluation_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    
+	</ListView>
+    </RelativeLayout>
+
+</merge>

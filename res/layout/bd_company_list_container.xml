@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_sort_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_sort_def"
+            android:text="综合排序"
+            style="@style/style_company_sort_button" />
+        
+        <Button
+            android:id="@+id/btn_sort_star"
+            android:text="星级优先"
+            style="@style/style_company_sort_button" />
+        
+        <Button
+            android:id="@+id/btn_sort_price"
+            android:text="价格优先"
+            style="@style/style_company_sort_button" />
+        
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_company"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </ListView>
+
+</LinearLayout>

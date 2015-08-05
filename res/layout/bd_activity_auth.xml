@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title_bar_style"
+        android:gravity="center"
+        android:text="便民服务"
+        android:textAppearance="@style/style_app_headtitle" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_jz_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#8FF9C6"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_nurse_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/bd_bmfw_default"
+                android:text="@string/nurse" />
+
+            <TextView
+                android:id="@+id/tv_housekeeping_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/bd_jzfw_default"
+                android:text="@string/housekeeping" />
+
+            <TextView
+                android:id="@+id/tv_procte_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/bd_bjfw_default"
+                android:text="@string/procte" />
+
+            <TextView
+                android:id="@+id/tv_hourly_container"
+                style="@style/style_text_menu"
+                android:drawableTop="@drawable/bd_xsgfw_default"
+                android:text="@string/hourly" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#dddddd" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" >
+
+            <include layout="@layout/bd_company_list_container" />
+            
+        </FrameLayout>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#dddddd" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7" >
+
+            <LinearLayout
+                android:id="@+id/ll_worker_selector"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:paddingTop="30dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_pre_worker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:src="@drawable/bd_pre_worker" />
+
+                <booking.bd.com.bdbooking.ui.HorizontalListView 
+                    android:id="@+id/hlv_worker_list"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_next_worker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/bd_next_worker" />
+            </LinearLayout> 
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ll_worker_selector"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="50dp"
+                android:maxEms="2"
+                android:text="提交预约" />
+
+            <booking.bd.com.bdbooking.item.WorkerInfoView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ll_worker_selector"
+                android:layout_toLeftOf="@id/btn_submit" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

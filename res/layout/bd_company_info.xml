@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<booking.bd.com.bdbooking.item.BdCompanyListItemView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bd_conpany_view_height" >
+
+    <ImageView
+        android:id="@+id/iv_company_logo"
+        style="@style/style_company_logo"
+       	android:background="@drawable/app_icon_quantum" /> 
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_company_logo"
+        android:layout_marginTop="@dimen/bd_company_view_paddingTB"
+        android:layout_toRightOf="@id/iv_company_logo"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/bd_company_name_max_width"/>
+
+    <RatingBar
+        android:id="@+id/rb_stars"
+        style="@style/style_rating_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_company_logo"
+        android:layout_marginBottom="@dimen/bd_company_view_paddingTB"
+        android:layout_toRightOf="@id/iv_company_logo"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="1" />
+
+</booking.bd.com.bdbooking.item.BdCompanyListItemView>

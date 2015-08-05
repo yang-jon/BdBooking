@@ -1,0 +1,25 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- yangzheng 0716 add begin -->
+    <dimen name="bd_conpany_view_height">100dp</dimen>
+    <dimen name="bd_company_logo_width">60dp</dimen>
+    <dimen name="bd_company_logo_height">60dp</dimen>
+    <dimen name="bd_company_logo_paddingLR">8dp</dimen>
+    <dimen name="bd_company_logo_paddingTB">10dp</dimen>
+    <dimen name="bd_company_name_max_width">110dp</dimen>
+    <dimen name="bd_company_view_paddingTB">5dp</dimen>
+    <dimen name="bd_worker_img_height">100dp</dimen>
+    <dimen name="bd_worker_img_width">75dp</dimen>
+    <dimen name="bd_worker_text_paddingTB">20dp</dimen>
+    <dimen name="bd_worker_name_text_size">15sp</dimen>
+    <dimen name="bd_worker_normal_text_size">12sp</dimen>
+    <dimen name="bd_worker_img_paddingStart">20dp</dimen>
+    <dimen name="bd_worker_img_paddingEnd">10dp</dimen>
+    <dimen name="bd_default_bitmap_size_h">60dp</dimen>
+    <dimen name="bd_default_bitmap_size_w">60dp</dimen>
+    <dimen name="bd_title_height">60dp</dimen>
+    <!-- yangzheng 0716 add end -->
+</resources>
