@@ -17,41 +17,35 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal" >
-
-        <LinearLayout
-            android:layout_width="0dp"
+        
+      <LinearLayout
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:background="#8FF9C6"
-            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="vertical" >
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <TextView
-                android:id="@+id/tv_drain_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/ic_launcher"
-                android:text="@string/drain" />
+            <ListView
+                android:id="@+id/lv_wx_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:divider="@null"
+                android:listSelector="@drawable/bd_def_bg"
+                android:gravity="center_vertical" />
 
-            <TextView
-                android:id="@+id/tv_electric_circuit_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/ic_launcher"
-                android:text="@string/electric_circuit" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <TextView
-                android:id="@+id/tv_replacing_lamp_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/ic_launcher"
-                android:text="@string/replacing_lamp" />
-
-            <TextView
-                android:id="@+id/tv_lock_repair_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/ic_launcher"
-                android:text="@string/lock_repair" />
         </LinearLayout>
-
+        
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
@@ -81,6 +75,7 @@
                 android:id="@+id/btn_submit"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/bd_btn_def_bg"
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="50dp"
                 android:layout_marginLeft="10dp"
@@ -89,17 +84,37 @@
                 android:maxEms="2"
                 android:text="提交预约" />
             
-            <LinearLayout
-                android:id="@+id/ll_worker_selector"
+             <WebView
+                android:id="@+id/wv_jgmc"
                 android:layout_toLeftOf="@id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="30dp"
                 android:layout_alignParentTop="true"
+                android:orientation="horizontal"/>
+             
+            <TextView
+                android:id="@+id/tv_jgmc"
+                android:layout_toLeftOf="@id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"/>
+            
+            <ListView
+                android:id="@+id/lv_worker_selector"
+                android:layout_toLeftOf="@id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:listSelector="@drawable/bd_def_bg"
+                android:layout_alignParentTop="true"
                 android:gravity="center"
-                android:orientation="horizontal" >
-            </LinearLayout> 
-
+                android:visibility="gone"
+                android:orientation="horizontal"/>
+                
         </RelativeLayout>
     </LinearLayout>
 

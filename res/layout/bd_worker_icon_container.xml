@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <LinearLayout
+        android:id="@+id/ll_focus_worker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="@drawable/bd_secondary_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_focus_icon"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_width="120dp"
+            android:layout_height="90dp"/>
+
+        <TextView
+            android:id="@+id/tv_focus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常小兰" />
+
+        <RatingBar
+            android:id="@+id/rb_focus_star"
+            style="@style/style_rating_worker"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+	<LinearLayout
+        android:id="@+id/ll_pre_worker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bd_sub_bg"
+        android:layout_toLeftOf="@id/ll_focus_worker"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_pre_icon"
+            android:padding="8dp"
+            android:layout_width="@dimen/bd_worker_img_width"
+            android:layout_height="@dimen/bd_worker_img_width" />
+
+        <TextView
+            android:id="@+id/tv_pre_name"
+            android:text="常小兰"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RatingBar
+            android:id="@+id/rb_pre_star"
+            style="@style/style_rating_worker"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_next_worker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bd_sub_bg"
+        android:layout_toRightOf="@id/ll_focus_worker"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_next_icon"
+            android:padding="8dp"
+            android:layout_width="@dimen/bd_worker_img_width"
+            android:layout_height="@dimen/bd_worker_img_width" />
+
+        <TextView
+            android:id="@+id/tv_next_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常小兰" />
+
+        <RatingBar
+            android:id="@+id/rb_next_star"
+            style="@style/style_rating_worker"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

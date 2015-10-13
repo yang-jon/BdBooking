@@ -2,26 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
-    android:background="@color/white"
+    android:padding="20dp"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:id="@+id/ll_title_container"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/bd_booking_width"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center">
         <ImageView 
             android:id="@+id/iv_titie_img"
             android:layout_centerInParent="true"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/step_divider"/>
         <TextView 
             android:id="@+id/tv_title_select_time"
             android:layout_toLeftOf="@id/iv_titie_img"
             android:paddingRight="20dp"
+            android:layout_centerInParent="true"
             android:text="1、请选择预约时段"
             android:textSize="20sp"
             android:layout_width="wrap_content"
@@ -32,6 +32,7 @@
             android:layout_toRightOf="@id/iv_titie_img"
             android:paddingLeft="20dp"
             android:textSize="20sp"
+            android:layout_centerInParent="true"
             android:text="2、确认您的信息"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

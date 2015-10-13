@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <booking.bd.com.bdbooking.item.BdDrinkInfoItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
+    android:descendantFocusability="afterDescendants"
+    android:layout_width="250dp"
+    android:layout_height="150dp" >
+
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bd_secondary_bg" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bd_secondary_bg" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bd_secondary_bg" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="150dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bd_secondary_bg" />	
     
 	<ImageView 
 	    android:id="@+id/iv_drink_img"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
 	    android:layout_marginLeft="20dp"
-	    android:layout_marginTop="30dp"
-	    android:layout_marginBottom="30dp"
+	    android:layout_centerVertical="true"
 	    android:layout_marginRight="10dp"
 	    android:src="@drawable/ic_launcher"
 	    android:layout_alignParentLeft="true"/>
-	
-	<TextView 
-	    android:id="@+id/tv_drink_name"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_toRightOf="@id/iv_drink_img"
-	    android:layout_alignTop="@id/iv_drink_img"
-	    android:text="农夫山泉饮用水"/>
 	
 	
 	<TextView 
@@ -30,16 +46,111 @@
 	    android:layout_height="wrap_content"
 	    android:text="¥29.00"
 	    android:layout_centerVertical="true"
-	    android:layout_toRightOf="@id/iv_drink_img"
-	    android:layout_below="@id/tv_drink_name"/>
-	
+	    android:layout_toRightOf="@id/iv_drink_img"/>
 	
 	<TextView 
-	    android:id="@+id/tv_drink_sold"
+	    android:id="@+id/tv_drink_name"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="最近售出：7"
 	    android:layout_toRightOf="@id/iv_drink_img"
-	    android:layout_alignBottom="@id/iv_drink_img"/>
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="30dp"
+	    android:text="农夫山泉饮用水"/>
+	
+<!--         android:layout_alignParentBottom="true" -->
+
+	<FrameLayout android:id="@+id/gap"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/iv_drink_img"
+		android:layout_alignParentBottom="true">
+	
+		<TextView 
+		    android:id="@+id/tv_drink_sold"
+		    android:layout_width="100dp"
+		    android:layout_height="wrap_content"
+		    android:text="最近售出：7"
+		    android:layout_marginBottom="30dp"/>
+		    
+	</FrameLayout>
+	
+<!--         android:layout_marginBottom="20dp" -->
+	<RelativeLayout
+        android:id="@+id/ll_number_selector"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:descendantFocusability="afterDescendants"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="110dp"
+        android:layout_height="40dp" >
+
+	    <TextView android:id="@+id/tv_number_jian"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:text="-"
+	        android:gravity="center"
+	        android:focusable="true"
+	        android:clickable="true"
+	        android:background="@drawable/bd_tv_def_bg"
+	        android:textSize="18sp"
+	        android:layout_alignParentLeft="true"/>
+	    
+	    <TextView android:id="@+id/tv_number"
+	        android:layout_width="30dp"
+	        android:layout_centerHorizontal="true"
+	        android:text="0"
+	        android:textSize="18sp"
+	        android:layout_height="40dp"
+	        android:gravity="center"/>
+	    
+	     <TextView android:id="@+id/tv_number_jia"
+	        android:layout_width="40dp"
+	        android:text="+"
+	        android:gravity="center"
+	        android:textSize="18sp"
+	        android:focusable="true"
+	        android:clickable="true"
+	        android:background="@drawable/bd_tv_def_bg"
+	        android:layout_height="40dp"
+	        android:layout_alignParentRight="true"/>
+	    
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bd_secondary_bg" />
+        
+         <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_number_jia"
+            android:background="@drawable/bd_secondary_bg" />
+
+         <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/tv_number_jian"
+            android:background="@drawable/bd_secondary_bg" />
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bd_secondary_bg" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bd_secondary_bg" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bd_secondary_bg" />
+    </RelativeLayout>
+
     
 </booking.bd.com.bdbooking.item.BdDrinkInfoItemView>

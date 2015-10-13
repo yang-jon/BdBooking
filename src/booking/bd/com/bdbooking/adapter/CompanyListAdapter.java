@@ -25,7 +25,7 @@ import booking.bd.com.bdbooking.json.IDecodeJson;
 import booking.bd.com.bdbooking.utils.PublicInterfaceFactory;
 import booking.bd.com.bdbooking.utils.XutilHttpPack;
 
-public class CompanyListAdapter extends BaseAdapter implements OnItemClickListener/*,OnHttpActionListener*/ {
+public class CompanyListAdapter extends BaseAdapter implements OnItemClickListener {
 	
 	private static final String TAG = "CompanyListAdapter";
 	private Context context;
@@ -35,17 +35,9 @@ public class CompanyListAdapter extends BaseAdapter implements OnItemClickListen
 	
 	public CompanyListAdapter(Context context) {
 		this.context = context;
+		mData = new ArrayList<CompanyInfo>();
 		mImgLoader = new XutilImageLoader(context);
 		mData = new ArrayList<CompanyInfo>();
-		mData.add(new CompanyInfo("XXX家政公司", 4));
-		mData.add(new CompanyInfo("XXX家政公司", 5));
-		mData.add(new CompanyInfo("XXX家政公司", 3.5f));
-		mData.add(new CompanyInfo("XXX家政公司", 3));
-		mData.add(new CompanyInfo("XXX家政公司", 3));
-		mData.add(new CompanyInfo("XXX家政公司", 4.5f));
-		mData.add(new CompanyInfo("XXX家政公司", 4));
-		mData.add(new CompanyInfo("XXX家政公司", 2.5f));
-		mData.add(new CompanyInfo("XXX家政公司", 4.5f));
 	}
 	
 	public interface SelectedItemChangeListener{
@@ -64,9 +56,9 @@ public class CompanyListAdapter extends BaseAdapter implements OnItemClickListen
 	@Override
 	public void notifyDataSetChanged() {
 		super.notifyDataSetChanged();
-		if(null != mListener){
-			mListener.onSelectedItemChanged(0);
-		}
+//		if(null != mListener){
+//			mListener.onSelectedItemChanged(0);
+//		}
 	}
 	
 	@Override
@@ -93,9 +85,9 @@ public class CompanyListAdapter extends BaseAdapter implements OnItemClickListen
 		}
 		itemView = (BdCompanyListItemView)convertView;
 		itemView.setName(info.getGsmc());
-		itemView.setStar(info.getFwpj());
-		itemView.setLogo(mImgLoader,"uri");
-		return convertView;
+		itemView.setStar(info.getPj());
+		itemView.setLogo(mImgLoader,info.getIcon());
+		return itemView;
 	}
 
 	@Override
@@ -105,42 +97,4 @@ public class CompanyListAdapter extends BaseAdapter implements OnItemClickListen
 			mListener.onSelectedItemChanged(position);
 		}
 	}
-	
-/*	public void sendData(String data, String url,
-			 final OnHttpActionListener mTatget, final int code) {
-		HttpHandler<String> mHttpHandler = BdApplication.getInstance().mHttpPack.sendData(data,
-	url, new XutilHttpPack.OnHttpActionCallBack() {
-
-		@Override
-		public void onHttpSuccess(String result) {
-			DecodeResult.decoResult(result, new IDecodeJson() {
-
-				@Override
-				public void onDecoded(String reason,
-									  boolean isSuccess, JsonObject mJsonResult,
-									  JsonArray mLists) {
-					mTatget.onDecoded(reason, isSuccess,
-							mJsonResult, mLists, code);
-				}
-			});
-		}
-
-		@Override
-		public void onHttpError(HttpException e, String messge) {
-			mTatget.onHttpError(e, messge, code);
-		}
-	});
-}
-
-	@Override
-	public void onHttpError(Exception e, String msg, int requestCode) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onDecoded(String reason, boolean isSuccess,
-			JsonObject mJsonResult, JsonArray mLists, int resultCode) {
-		ArrayList<Worker> workers = PublicInterfaceFactory.getJzWorkerFromJson(mJsonResult);
-	}*/
 }

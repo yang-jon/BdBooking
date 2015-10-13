@@ -5,8 +5,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="style_text_style" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:background">@drawable/bd_def_bg</item>
+    </style>
+    
     <style name="title_bar_style">
-        <item name="android:background">@drawable/bg_pressed</item>
+        <item name="android:background">@drawable/bd_title_bar_bg</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/bd_title_height</item>
     </style>
@@ -18,30 +22,42 @@
 
     <style name="style_rating_normal" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/drawable_ratable</item>
-        <item name="android:minHeight">20dp</item>
-        <item name="android:maxHeight">30dp</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">15dp</item>
     </style>
     
     <style name="style_rating_company" parent="@style_rating_normal">
         <item name="android:progressDrawable">@drawable/company_ratingbar</item>
-        <item name="android:minHeight">20dp</item>
-        <item name="android:maxHeight">40dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:minHeight">22px</item>
+        <item name="android:maxHeight">22px</item>
         <item name="android:numStars">5</item>
         <item name="android:stepSize">1</item>
     </style>
     
       <style name="style_rating_secondary" parent="@style_rating_normal">
         <item name="android:progressDrawable">@drawable/secondary_rating</item>
-        <item name="android:minHeight">20dp</item>
-        <item name="android:maxHeight">30dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:minHeight">11px</item>
+        <item name="android:maxHeight">11px</item>
         <item name="android:numStars">5</item>
         <item name="android:stepSize">1</item>
     </style>
     
+    <style name="style_rating_worker_info" parent="@style_rating_normal">
+        <item name="android:progressDrawable">@drawable/secondary_rating</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:minHeight">10px</item>
+        <item name="android:maxHeight">10px</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+    </style>
+      
     <style name="style_rating_worker" parent="@style_rating_normal">
         <item name="android:progressDrawable">@drawable/worker_rating</item>
-        <item name="android:minHeight">20dp</item>
-        <item name="android:maxHeight">30dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:minHeight">10px</item>
+        <item name="android:maxHeight">10px</item>
         <item name="android:numStars">5</item>
         <item name="android:stepSize">1</item>
     </style>
@@ -52,14 +68,18 @@
 	    <item name="android:layout_marginBottom">@dimen/bd_company_logo_paddingTB</item>
 	    <item name="android:layout_marginTop">@dimen/bd_company_logo_paddingTB</item>
 	    <item name="android:layout_width">@dimen/bd_company_logo_width</item>
-	    <item name="android:gravity">center</item>
 	    <item name="android:layout_height">@dimen/bd_company_logo_height</item>
+	    <item name="android:gravity">center</item>
 	</style>
 	
 	<style name="style_company_sort_button">
-	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_height">50dp</item>
 	    <item name="android:layout_width">0dp</item>
 	    <item name="android:layout_weight">1</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:focusable">true</item>
+	    <item name="android:clickable">true</item>
+	    <item name="android:background">@drawable/bd_def_bg</item>
 	</style>
 	
 	<style name="style_text_menu">

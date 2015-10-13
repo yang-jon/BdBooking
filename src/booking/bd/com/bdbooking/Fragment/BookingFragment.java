@@ -7,9 +7,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-import booking.bd.com.bdbooking.R;
+import booking.bd.com.bdbooking.jz.R;
 import booking.bd.com.bdbooking.utils.PublicInterfaceFactory;
 
 public class BookingFragment extends DialogFragment {
@@ -18,9 +16,11 @@ public class BookingFragment extends DialogFragment {
 	private View mFragment;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		mFragment = View.inflate(getActivity(), R.layout.bd_activity_check_booking, null);
+		setStyle(AlertDialog.THEME_DEVICE_DEFAULT_LIGHT, 0);
 		super.onCreate(savedInstanceState);
+		mFragment = View.inflate(getActivity(),R.layout.bd_activity_check_booking, null);
 	}
+	
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
          AlertDialog.Builder builder = new AlertDialog.Builder(this

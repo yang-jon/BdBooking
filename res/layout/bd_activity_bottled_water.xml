@@ -25,44 +25,86 @@
             android:text="请选择送水公司"
             android:textSize="20sp" />
 
+        <LinearLayout
+            android:id="@+id/ll_btn_container"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp" >
+
+            <Button
+                android:id="@+id/btn_pre_page"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bd_btn_def_bg"
+                android:text="上一页" />
+
+            <Button
+                android:id="@+id/btn_next_page"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bd_btn_def_bg"
+                android:text="下一页" />
+        </LinearLayout>
+        
         <ListView
             android:id="@+id/ll_company_list"
-            android:layout_width="150dp"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
+            android:listSelector="@drawable/bd_def_bg"
             android:layout_alignLeft="@id/tv_sub_title"
+            android:layout_above="@id/ll_btn_container"
             android:layout_below="@id/tv_sub_title" />
+        
         
         <View android:id="@+id/divider"
             android:layout_width="2px"
             android:layout_height="match_parent"
             android:layout_toRightOf="@id/ll_company_list"
             android:layout_margin="10dp"
-            android:background="#716A70"/>
+            android:background="@drawable/bd_secondary_bg"/>
 
         <RelativeLayout
             android:id="@+id/ll_drinking_list"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
             android:gravity="center_horizontal"
             android:layout_toRightOf="@id/divider"
             android:layout_below="@id/tv_sub_title" >
 
             <Button
                 android:id="@+id/btn_submit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
+                android:background="@drawable/bd_btn_def_bg"
                 android:text="提交预约" />
 
             <GridView
-                android:id="@+id/ll_drinking_list"
-                android:layout_width="150dp"
+                android:id="@+id/gv_drinking_list"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="30dp"
+                android:verticalSpacing="10dp"  
+				android:horizontalSpacing="5dp"
+                android:columnWidth="250dp"
+                android:stretchMode="spacingWidth"
+				android:numColumns="auto_fit"
+				android:descendantFocusability="afterDescendants"
+                android:listSelector="@drawable/bd_def_bg"
                 android:layout_above="@id/btn_submit"
-                android:layout_alignParentRight="true"
-                android:numColumns="2" />
+                android:layout_alignParentRight="true"/>
         </RelativeLayout>
     </RelativeLayout>
 

@@ -21,10 +21,20 @@ public class JsonUtil {
 	 * @param json
 	 * @return
 	 */
-	public static JsonObject parse(String json) {
+	public static JsonObject parseObject(String json) {
 		try {
 			return new JsonParser().parse(json).getAsJsonObject();
 		} catch (Exception e) {
+			LogUtils.d(XutilHttpPack.HTTP_TAG, "exception :: " +e.getMessage());
+			return null;
+		}
+	}
+	
+	public static JsonArray parseArray(String json) {
+		try {
+			return new JsonParser().parse(json).getAsJsonArray();
+		} catch (Exception e) {
+			LogUtils.d(XutilHttpPack.HTTP_TAG, "exception :: " +e.getMessage());
 			return null;
 		}
 	}

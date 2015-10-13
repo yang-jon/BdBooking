@@ -4,36 +4,116 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+     <LinearLayout
+        android:id="@+id/ll_com_per_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+        
+         <ImageView 
+             android:id="@+id/iv_company"
+             android:src="@drawable/company_selected"
+             android:focusable="true"
+             android:clickable="true"
+             android:background="@drawable/bd_def_bg"
+             android:layout_marginRight="15dp"
+             android:layout_width="100dp"
+             android:layout_height="60dp"/>
+         
+          <ImageView 
+             android:id="@+id/iv_person"
+             android:src="@drawable/person"
+             android:focusable="true"
+             android:clickable="true"
+             android:layout_marginLeft="15dp"
+             android:background="@drawable/bd_def_bg"
+             android:layout_width="100dp"
+             android:layout_height="60dp"/>
+
+    </LinearLayout>
+    
     <LinearLayout
         android:id="@+id/ll_sort_selector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:padding="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
-        <Button
+        <TextView
             android:id="@+id/btn_sort_def"
             android:text="综合排序"
-            style="@style/style_company_sort_button" />
+            style="@style/style_company_sort_button" 
+            android:textColor="#F61313"/>
         
-        <Button
+        <TextView
             android:id="@+id/btn_sort_star"
             android:text="星级优先"
             style="@style/style_company_sort_button" />
         
-        <Button
+        <TextView
             android:id="@+id/btn_sort_price"
             android:text="价格优先"
             style="@style/style_company_sort_button" />
         
     </LinearLayout>
-
+		
+    <View android:id="@+id/select_divider"
+        android:layout_marginLeft="20dp"
+        android:layout_width="148dp"
+        android:layout_height="1dp"
+        android:background="#F61313"/>
+    
     <ListView
         android:id="@+id/lv_company"
+        android:layout_marginTop="20dp"
+        android:listSelector="@drawable/bd_def_bg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
     </ListView>
+    
+     <ListView
+        android:id="@+id/lv_person"
+        android:layout_marginTop="20dp"
+        android:listSelector="@drawable/bd_def_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        android:visibility="gone"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+        
+        <Button android:id="@+id/btn_pre_page"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:text="上一页"
+            android:background="@drawable/bd_btn_def_bg"/>
+        
+         <Button android:id="@+id/btn_next_page"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="下一页"
+            android:background="@drawable/bd_btn_def_bg"/>
+    </LinearLayout>
 
 </LinearLayout>

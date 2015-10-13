@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    
+	<ImageView 
+	    android:id="@+id/iv_jz_pro_menu_img"
+	    android:layout_width="@dimen/bd_project_menu_size_w"
+	    android:layout_height="@dimen/bd_project_menu_size_h"
+    	android:gravity="center_horizontal"
+    	android:layout_marginBottom="5dp"/>
+	
+	<TextView 
+	    android:id="@+id/iv_jz_pro_menu_text"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal"
+	    android:text="保洁服务"/>
+	
+</LinearLayout>

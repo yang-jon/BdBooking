@@ -7,8 +7,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import booking.bd.com.bdbooking.R;
 import booking.bd.com.bdbooking.XutilImageLoader;
+import booking.bd.com.bdbooking.jz.R;
 import booking.bd.com.bdbooking.utils.ViewHolder;
 
 public class BdCompanyListItemView extends RelativeLayout {

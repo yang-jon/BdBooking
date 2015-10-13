@@ -18,51 +18,138 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="50dp"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical">
         
-        <LinearLayout android:id="@+id/ll_completed_book_container"
+        <RelativeLayout android:id="@+id/ll_completed_book_container"
             android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:layout_weight="1">
+			
+            <RelativeLayout android:id="@+id/ll_completed_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             
-            <TextView android:id="@+id/tv_completed_book"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:background="#6E6E6E"
-                android:text="已完成订单"/>
+	            <ImageView 
+	                android:id="@+id/iv_completed_icon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:src="@drawable/bd_order_completed"/>
+	            
+	            <TextView 
+	                android:id="@+id/tv_completed_book"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textSize="20sp"
+	                android:text="已完成订单"/>
+            </RelativeLayout>
+            
+            
+            <ImageView
+                android:id="@+id/iv_pre_ywc_page"
+                android:layout_toRightOf="@id/ll_completed_book"
+                android:layout_alignBaseline="@id/ll_completed_book"
+                android:layout_width="60dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bd_def_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:src="@drawable/bd_pre_worker" />
+            
+            <ImageView
+                android:id="@+id/iv_next_ywc_page"
+                android:layout_alignBaseline="@id/ll_completed_book"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bd_def_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                android:src="@drawable/bd_next_worker"/>
+            
             <booking.bd.com.bdbooking.ui.HorizontalListView 
                 android:id="@+id/hl_completed_book_list"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1">
-            </booking.bd.com.bdbooking.ui.HorizontalListView>
+                android:layout_toRightOf="@id/iv_pre_ywc_page"
+                android:layout_toLeftOf="@id/iv_next_ywc_page"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:listSelector="@drawable/bd_def_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
             
-        </LinearLayout>
+        </RelativeLayout>
         
-         <LinearLayout android:id="@+id/ll_uncompleted_book_container"
+         <RelativeLayout android:id="@+id/ll_uncompleted_book_container"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:layout_weight="1">
             
-            <TextView android:id="@+id/tv_uncompleted_book"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:background="#6E6E6E"
-                android:text="未完成订单"/>
+               <RelativeLayout android:id="@+id/ll_uncompleted_book"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            
+	            <ImageView 
+	                android:id="@+id/iv_uncompleted_icon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:src="@drawable/bd_order_uncompleted"/>
+	            
+	            <TextView 
+	                android:id="@+id/tv_uncompleted_book"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textSize="20sp"
+	                android:text="未完成订单"/>
+            </RelativeLayout>
+            
+            <ImageView
+                android:id="@+id/iv_pre_wwc_page"
+                android:layout_toRightOf="@id/ll_uncompleted_book"
+                android:layout_alignBaseline="@id/ll_uncompleted_book"
+                android:layout_width="60dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bd_def_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:src="@drawable/bd_pre_worker" />
+            
+            <ImageView
+                android:id="@+id/iv_next_wwc_page"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@id/ll_uncompleted_book"
+                android:layout_width="60dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bd_def_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                android:src="@drawable/bd_next_worker"/>
+            
             <booking.bd.com.bdbooking.ui.HorizontalListView 
                 android:id="@+id/hl_uncompleted_book_list"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1">
+                android:layout_toRightOf="@id/iv_pre_wwc_page"
+                android:layout_toLeftOf="@id/iv_next_wwc_page"
+                android:listSelector="@drawable/bd_def_bg"
+                android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+	            <requestFocus />
             </booking.bd.com.bdbooking.ui.HorizontalListView>
             
-        </LinearLayout>
+        </RelativeLayout>
         
     </LinearLayout>
 

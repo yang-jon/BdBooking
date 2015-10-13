@@ -14,43 +14,36 @@
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="horizontal" >
-
+        
         <LinearLayout
             android:id="@+id/ll_jz_menu"
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:background="#8FF9C6"
-            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="vertical" >
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <TextView
-                android:id="@+id/tv_nurse_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/bd_bmfw_default"
-                android:text="@string/nurse" />
+            <ListView
+                android:id="@+id/lv_jz_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:divider="@null"
+                android:listSelector="@drawable/bd_def_bg"
+                android:gravity="center_vertical" />
 
-            <TextView
-                android:id="@+id/tv_housekeeping_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/bd_jzfw_default"
-                android:text="@string/housekeeping" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <TextView
-                android:id="@+id/tv_procte_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/bd_bjfw_default"
-                android:text="@string/procte" />
-
-            <TextView
-                android:id="@+id/tv_hourly_container"
-                style="@style/style_text_menu"
-                android:drawableTop="@drawable/bd_xsgfw_default"
-                android:text="@string/hourly" />
         </LinearLayout>
 
         <View
@@ -82,34 +75,42 @@
             <LinearLayout
                 android:id="@+id/ll_worker_selector"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:paddingTop="30dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="50dp"
+    			android:paddingRight="50dp"
                 android:layout_alignParentTop="true"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
                 <ImageView
                     android:id="@+id/iv_pre_worker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_width="60dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
                     android:focusable="true"
                     android:clickable="true"
+                    android:background="@drawable/bd_def_bg"
                     android:src="@drawable/bd_pre_worker" />
 
-                <booking.bd.com.bdbooking.ui.HorizontalListView 
-                    android:id="@+id/hlv_worker_list"
-                    android:layout_height="wrap_content"
+				<include 
+				    android:layout_height="wrap_content"
                     android:layout_width="0dp"
-                    android:layout_weight="1"/>
-
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_gravity="center_horizontal"
+                    layout="@layout/bd_worker_icon_container"/>
+				
                 <ImageView
                     android:id="@+id/iv_next_worker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
+                    android:layout_width="60dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:background="@drawable/bd_def_bg"
                     android:src="@drawable/bd_next_worker" />
             </LinearLayout> 
 
@@ -124,9 +125,11 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="50dp"
                 android:maxEms="2"
+                android:background="@drawable/bd_btn_def_bg"
                 android:text="提交预约" />
 
             <booking.bd.com.bdbooking.item.WorkerInfoView
+                android:id="@+id/wiv_worker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/ll_worker_selector"

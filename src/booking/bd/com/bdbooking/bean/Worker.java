@@ -11,11 +11,23 @@ public class Worker {
 	private String sjhm;	//手机号码
 	private String xl;		//学历
 	private String grms;	//个人描述
-	private String gsxxid;	//公司信息ID
-	private String gsxxmc;	//公司信息名称
+	private String gsid;	//公司信息ID
+	private String gsmc;	//公司信息名称
+	private String fwpj;	//服务评级
+	private String 	qbjg;	//起步价格
+	private String	zp;		//照片
+	private String	ygbh;	//员工编号
+	private String	pxjl;	//培训记录
+	private String	grtc;	//个人特长
+	private String	xjzdz;	//现居住地址
+	private String 	Grnl;	//个人能力
+	public String getFwpj() {
+		return fwpj;
+	}
 	public Worker(String id, String xm, String nl, String gznx, String xb,
-			String jg, String sjhm, String xl, String grms, String gsxxid,
-			String gsxxmc) {
+			String jg, String sjhm, String xl, String grms, String gsid,
+			String gsmc, String fwpj, String qbjg, String zp, String ygbh,
+			String pxjl, String grtc, String xjzdz, String grnl) {
 		super();
 		this.id = id;
 		this.xm = xm;
@@ -26,8 +38,80 @@ public class Worker {
 		this.sjhm = sjhm;
 		this.xl = xl;
 		this.grms = grms;
-		this.gsxxid = gsxxid;
-		this.gsxxmc = gsxxmc;
+		this.gsid = gsid;
+		this.gsmc = gsmc;
+		this.fwpj = fwpj;
+		this.qbjg = qbjg;
+		this.zp = zp;
+		this.ygbh = ygbh;
+		this.pxjl = pxjl;
+		this.grtc = grtc;
+		this.xjzdz = xjzdz;
+		Grnl = grnl;
+	}
+	public void setFwpj(String fwpj) {
+		this.fwpj = fwpj;
+	}
+	public String getQbjg() {
+		return qbjg;
+	}
+	public void setQbjg(String qbjg) {
+		this.qbjg = qbjg;
+	}
+	public String getZp() {
+		return zp;
+	}
+	public void setZp(String zp) {
+		this.zp = zp;
+	}
+	public String getYgbh() {
+		return ygbh;
+	}
+	public void setYgbh(String ygbh) {
+		this.ygbh = ygbh;
+	}
+	public String getPxjl() {
+		return pxjl;
+	}
+	public void setPxjl(String pxjl) {
+		this.pxjl = pxjl;
+	}
+	public String getGrtc() {
+		return grtc;
+	}
+	public void setGrtc(String grtc) {
+		this.grtc = grtc;
+	}
+	public String getXjzdz() {
+		return xjzdz;
+	}
+	public void setXjzdz(String xjzdz) {
+		this.xjzdz = xjzdz;
+	}
+	public String getGrnl() {
+		return Grnl;
+	}
+	public void setGrnl(String grnl) {
+		Grnl = grnl;
+	}
+	public void setGsid(String gsid) {
+		this.gsid = gsid;
+	}
+	public Worker(String id, String xm, String nl, String gznx, String xb,
+			String jg, String sjhm, String xl, String grms, String gsid,
+			String gsmc) {
+		super();
+		this.id = id;
+		this.xm = xm;
+		this.nl = nl;
+		this.gznx = gznx;
+		this.xb = xb;
+		this.jg = jg;
+		this.sjhm = sjhm;
+		this.xl = xl;
+		this.grms = grms;
+		this.gsid = gsid;
+		this.gsmc = gsmc;
 	}
 	public String getId() {
 		return id;
@@ -83,16 +167,23 @@ public class Worker {
 	public void setGrms(String grms) {
 		this.grms = grms;
 	}
-	public String getGsxxid() {
-		return gsxxid;
+	public String getGsid() {
+		return gsid;
 	}
-	public void setGsxxid(String gsxxid) {
-		this.gsxxid = gsxxid;
+	public void setGsxxid(String gsid) {
+		this.gsid = gsid;
 	}
-	public String getGsxxmc() {
-		return gsxxmc;
+	public String getGsmc() {
+		return gsmc;
 	}
-	public void setGsxxmc(String gsxxmc) {
-		this.gsxxmc = gsxxmc;
+	public void setGsmc(String gsmc) {
+		this.gsmc = gsmc;
+	}
+	public float getStar(){
+		try {
+			return Float.parseFloat(fwpj);
+		} catch (NumberFormatException e) {
+			return 0;
+		}
 	}
 }

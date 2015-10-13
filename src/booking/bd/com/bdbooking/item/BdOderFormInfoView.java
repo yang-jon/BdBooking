@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import booking.bd.com.bdbooking.R;
+import booking.bd.com.bdbooking.jz.R;
 import booking.bd.com.bdbooking.utils.ViewHolder;
 
 public class BdOderFormInfoView extends RelativeLayout{
@@ -38,6 +38,10 @@ public class BdOderFormInfoView extends RelativeLayout{
 		mCancel = (Button) findViewById(R.id.btn_cancel);
 	}
 	
+	public Button getCancelButton(){
+		return mCancel;
+	}
+	
 	public static BdOderFormInfoView createBdOderFormInfoView(Context context){
 		return (BdOderFormInfoView) inflate(context, R.layout.bd_booking_info, null);
 	}
@@ -55,7 +59,7 @@ public class BdOderFormInfoView extends RelativeLayout{
 			mCancel.setVisibility(View.GONE);
 			break;
 		case TAG_EVALUATE:
-			mScore.setVisibility(View.GONE);
+			mScore.setVisibility(View.VISIBLE);
 			mStar.setVisibility(View.VISIBLE);
 			mCancel.setVisibility(View.GONE);
 			break;
